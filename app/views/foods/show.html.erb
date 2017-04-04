@@ -1,2 +1,61 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<%provide(:title, @food.title)%>
+<!-- banner-text -->
+	<div class="banner-text">	
+		<div class="container">
+			<h2><%= @food.title %></h2> 
+		</div>
+	</div>
+
+	<!-- //banner -->    
+
+	<!--  about-page -->
+	<div class="about">
+		<div class="container"> 
+			<h3 class="w3ls-title w3ls-title1">Description</h3>
+			<div class="about-text">	
+				<p><%= @food.description %></p> 
+				<div class="ftr-toprow">
+					<div class="col-md-4 ftr-top-grids">
+						<div class="ftr-top-left">
+							<i class="fa fa-truck" aria-hidden="true"></i>
+						</div> 
+						<div class="ftr-top-right">
+							<h4>Calorie</h4>
+							<p><%= @food.calorie %></p>
+						</div> 
+						<div class="clearfix"> </div>
+					</div> 
+					<div class="col-md-4 ftr-top-grids">
+						<div class="ftr-top-left">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</div> 
+						<div class="ftr-top-right">
+							<h4>Nutrition</h4>
+							<p><%= @food.nutrition %> </p>
+						</div> 
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-4 ftr-top-grids">
+						<div class="ftr-top-left">
+							<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+						</div> 
+						<div class="ftr-top-right">
+							<h4>Cost</h4>
+							<p><%= @food.cost %> </p>
+						</div>
+						<div class="clearfix"> </div>
+					</div> 
+					<div class="clearfix"> </div>
+				</div> 
+				<div class="clearfix"> </div>
+			</div>
+			<div class="history">
+				<h3 class="w3ls-title">Directions</h3>
+				<p><%= @food.directions %></p> 
+				<!--<h3 class="w3ls-title">Our history</h3>-->
+				<!--<p>Etiam faucibus viverra libero vel efficitur. Ut semper nisl ut laoreet ultrices. Maecenas dictum arcu purus, sit amet volutpat purus viverra sit amet. Quisque lacinia quam sed tortor interdum, malesuada congue nunc ornare. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper lorem eget tortor pulvinar ultricies. Nulla sodales efficitur consequat. Maecenas mi diam, imperdiet consectetur ultricies nec, convallis sit amet turpis.-->
+				<!--	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor vehicula ipsum nec ultrices. Pellentesque sed feugiat sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor vehicula ipsum nec ultrices. Pellentesque sed feugiat sapien.  ullamcorper nunc. Aenean eget massa orci. Vivamus vulputate elit at rutrum elementum. Duis sit amet posuere justo, sit amet finibus urna. Aenean elementum diam nec laoreet sodales. Morbi vulputate tempor nisl nec tristique.</p> -->
+			</div>
+		</div>
+	</div>
+	<!-- //about-page --> 
