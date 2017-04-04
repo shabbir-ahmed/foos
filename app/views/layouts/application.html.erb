@@ -30,7 +30,9 @@
     							</li> 
     							<% if logged_in? %>
 									<li class="dropdown">
-									    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.full_name %> <b class="caret"></b></a>
+									    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									        <i class="fa fa-user-plus" aria-hidden="true"></i> <%= current_user.full_name %> <b class="caret"></b>
+									    </a>
     									<ul class="dropdown-menu multi-column columns-3">
     										<div class="row">
     											<div class="col-sm-10">
@@ -45,6 +47,10 @@
     										</div>
     									</ul>
 									</li>
+									
+									<li class="head-dpdn">
+        								<a href="<%= new_food_path %>"><i class="fa fa-cutlery" aria-hidden="true"></i> Post New</a>
+        							</li> 
 									
 								<% else %>
     						
