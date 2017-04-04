@@ -1,4 +1,10 @@
 <%provide(:title, @food.title)%>
+<style>
+	.banner-text{
+	    background: url(<%= @food.image1_url %>) no-repeat center;
+	    background-size: cover;
+	}
+</style>
 <!-- banner-text -->
 	<div class="banner-text">	
 		<div class="container">

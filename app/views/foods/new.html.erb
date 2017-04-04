@@ -27,6 +27,10 @@
 					<%= f.text_field :nutrition, class: "form-control", placeholder: "Nutrition" %>
 					
 					<%= f.text_field :calorie, class: "form-control", placeholder: "Calorie" %>
+					
+					<%= f.file_field :image1, class: "form-control" %>
+					<%= f.file_field :image2, class: "form-control" %>
+					<%= f.file_field :image3, class: "form-control" %>
 
 					<%= f.submit 'Create Delecious Food' %>
 				<% end %>
