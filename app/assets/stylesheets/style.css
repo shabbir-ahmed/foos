@@ -108,7 +108,7 @@ body a:focus {
 .navigation {
     padding: 0 0 0.6em;
     text-align: center;
-    background: rgba(253, 70, 62, 0.84);
+    background: rgba(103, 182, 228, 0.88);
 	position: relative;
 } 
 .w3ls_products_pos h4 {
@@ -4287,3 +4287,28 @@ img.w3order-img {
 }
 }
 /*-- //responsive-design --*/
+
+.browse {
+    display:inline-block;
+    color:#fff;
+    border:1px solid #CCC;
+    background:#875ed9;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 11px;
+    padding: 11px 19px 10px 20px;
+}
+
+.browse:hover {
+  background: #67b6e4;
+  background-image: -webkit-linear-gradient(top, #f51616, #d93434);
+  background-image: -moz-linear-gradient(top, #f51616, #d93434);
+  background-image: -ms-linear-gradient(top, #f51616, #d93434);
+  background-image: -o-linear-gradient(top, #f51616, #d93434);
+  background-image: linear-gradient(to bottom, #f51616, #d93434);
+  text-decoration: none;
+}

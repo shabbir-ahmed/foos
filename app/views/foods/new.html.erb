@@ -34,9 +34,13 @@
 					
 					<br/>
 					
-					<%= f.file_field :image1, class: "form-control", id: "avatar-upload1" %>
-					<%= f.file_field :image2, class: "form-control", id: "avatar-upload2" %>
-					<%= f.file_field :image3, class: "form-control", id: "avatar-upload3" %>
+					<div id="browse1" class="browse">Image1</div>
+					<div id="browse2" class="browse">Image2</div>
+					<div id="browse3" class="browse">Image3</div>
+					
+					<%= f.file_field :image1, style: "display:none", id: "avatar-upload1" %>
+					<%= f.file_field :image2, style: "display:none", id: "avatar-upload2" %>
+					<%= f.file_field :image3, style: "display:none", id: "avatar-upload3" %>
 
 					<%= f.submit 'Create Delecious Food' %>
 				<% end %>
