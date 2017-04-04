@@ -1,0 +1,45 @@
+<%provide(:title, "Login")%>
+<!-- breadcrumb -->  
+<div class="container">	
+	<ol class="breadcrumb w3l-crumbs">
+		<li><a href="<%= root_url %>"><i class="fa fa-home"></i> Home</a></li> 
+		<li class="active">Login</li>
+	</ol>
+</div>
+<!-- //breadcrumb -->
+<% flash.each do |key, value| %>
+<div class="col-md-12">
+	<div class="alert alert-<%= key %> fade in" data-easein="expandIn">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<%= value %>
+	</div>
+</div>
+<% end %>
+
+<!-- login-page -->
+<div class="login-page about">
+	<%= image_tag "img3.jpg", class: "login-w3img" %>
+	<div class="container"> 
+		<h3 class="w3ls-title w3ls-title1">Login to your account</h3>  
+		<div class="login-agileinfo"> 
+			<%= form_for :session, url: accounts_user_session_accounts_path  do |f| %>
+				<%= f.email_field :email, class: 'agile-ltext', placeholder: 'Email address', required: true %>
+				<%= f.password_field :password, required: true, class: 'agile-ltext', placeholder: 'Password' %>
+				<div class="wthreelogin-text"> 
+					<ul> 
+						<li>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i> 
+								<span> Remember me ?</span> 
+							</label> 
+						</li>
+						<li><a href="#">Forgot password?</a> </li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>   
+				<%= f.submit 'LOGIN' %>
+			<% end %>
+			<p>Don't have an Account? <a href="<%= new_account_path %>"> Sign Up Now!</a></p> 
+		</div>	 
+	</div>
+</div>
+<!-- //login-page -->  

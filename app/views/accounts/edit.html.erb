@@ -1,0 +1,34 @@
+<%provide(:title, "Edit")%>
+<!-- breadcrumb -->  
+	<div class="container">	
+		<ol class="breadcrumb w3l-crumbs">
+			<li><a href="<%= root_url %>"><i class="fa fa-home"></i> Home</a></li> 
+			<li class="active">Edit</li>
+		</ol>
+	</div>
+	<!-- //breadcrumb -->
+	<!-- sign up-page -->
+	<div class="login-page about">
+		<!-- <img class="login-w3img" src="images/img3.jpg" alt=""> -->
+		<%= image_tag "img3.jpg", class: "login-w3img" %>
+		<div class="container"> 
+			<h3 class="w3ls-title w3ls-title1">Update your account</h3>  
+			<div class="login-agileinfo"> 
+				<%= form_for @user, url: account_path do |f| %>
+
+					<%= f.text_field :full_name, class: "agile-ltext", placeholder: "Full Name", required: true %>
+
+					<%= f.email_field :email, class: "agile-ltext", placeholder: "Email", required: true %>
+					
+					<%= f.text_field :gender, class: "agile-ltext", placeholder: "Gender" %>
+					
+					<%= f.text_field :phone, class: "agile-ltext", placeholder: "Phone" %>
+					
+					<%= f.text_field :address, class: "agile-ltext", placeholder: "Address" %>
+
+					<%= f.submit 'Update' %>
+				<% end %>
+			</div>	 
+		</div>
+	</div>
+	<!-- //sign up-page --> 

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title><%= yield(:title) %> | Food Web</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <link href="//fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
+        <link href="//fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+       <div class="banner">
+    		<!-- header -->
+    		<div class="header">
+    			<div class="w3ls-header">
+    				<div class="container">
+    					<div class="w3ls-header-left">
+    						<p>Find your awesome food before you traveling</p>
+    					</div>
+    					<div class="w3ls-header-right">
+    						<ul> 
+    							<li class="head-dpdn">
+    								<i class="fa fa-phone" aria-hidden="true"></i> Call us: +880 1714 698 679
+    							</li> 
+    							<% if logged_in? %>
+									<li class="dropdown">
+									    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.full_name %> <b class="caret"></b></a>
+    									<ul class="dropdown-menu multi-column columns-3">
+    										<div class="row">
+    											<div class="col-sm-10">
+    												<ul class="multi-column-dropdown">
+    													<li><a href="<%= edit_account_path(current_user) %>">Edit Profile</a></li> 
+    													<li><a href="<%= account_path(current_user) %>">View Profile</a></li> 
+    													 <hr> 
+    													<li><%= link_to " Log out", logout_accounts_path, method: :delete %></li>
+    												</ul>
+    											</div>
+    											<div class="clearfix"></div>
+    										</div>
+    									</ul>
+									</li>
+									
+								<% else %>
+    						
+        							<li class="head-dpdn">
+        								<a href="<%= new_account_path %>"><i class="fa fa-user-plus" aria-hidden="true"></i> Signup</a>
+        							</li> 
+        							<li class="head-dpdn">
+        								<a href="<%= login_accounts_path %>"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+        							</li> 
+        						<% end %>
+    							
+    							<li class="head-dpdn">
+    								<a href="help.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+    							</li>
+    						</ul>
+    					</div>
+    					<div class="clearfix"> </div> 
+    				</div>
+    			</div>
+    			<!-- //header-one -->    
+    			<!-- navigation -->
+    			<div class="navigation agiletop-nav">
+    				<div class="container">
+    					<nav class="navbar navbar-default">
+    						<!-- Brand and toggle get grouped for better mobile display -->
+    						<div class="navbar-header w3l_logo">
+    							<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+    								<span class="sr-only">Toggle navigation</span>
+    								<span class="icon-bar"></span>
+    								<span class="icon-bar"></span>
+    								<span class="icon-bar"></span>
+    							</button>  
+    							<h1><a href="<%= root_url %>">Awesome Food<span>The Best Food Collection</span></a></h1>
+    						</div> 
+    						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+    							<ul class="nav navbar-nav navbar-right">
+    								<li><a href="index.html" class="active">Home</a></li>	
+    								<!-- Mega Menu -->
+    								<li class="dropdown">
+    									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cities <b class="caret"></b></a>
+    									<ul class="dropdown-menu multi-column columns-3">
+    										<div class="row">
+    											<div class="col-sm-4">
+    												<ul class="multi-column-dropdown">
+    													<h6>City</h6> 
+    													<li><a href="sylhet.html">Sylhet</a></li> 
+    													<li><a href="dhaka.html">Dhaka</a></li> 
+    													<li><a href="khulna.html">Khulna</a></li> 
+    													<li><a href="rajshahi.html">Rajshahi</a></li> 
+    												</ul>
+    											</div>
+    											<div class="clearfix"></div>
+    										</div>
+    									</ul>
+    								</li>
+    								<li><a href="about.html">About</a></li> 
+    								<li><a href="contact.html">Contact Us</a></li>
+    							</ul>
+    						</div>
+    					</nav>
+    				</div>
+    			</div>
+    			<!-- //navigation --> 
+    		</div>
+    		<!-- //header-end --> 
+    	</div> 
+        
+        <%= yield %>
+    
+    
+        <!-- subscribe -->
+		<div class="subscribe agileits-w3layouts"> 
+			<div class="container">
+				<div class="col-md-6 social-icons w3-agile-icons">
+					<h4>Keep in touch</h4>  
+					<ul>
+						<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+						<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+						<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+						<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+						<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
+					</ul> 
+				</div> 
+				<div class="col-md-6 subscribe-right">
+					<h3 class="w3ls-title">Subscribe to Our <br><span>Newsletter</span></h3>  
+					<form action="#" method="post"> 
+						<input type="email" name="email" placeholder="Enter your Email..." required="">
+						<input type="submit" value="Subscribe">
+						<div class="clearfix"> </div> 
+					</form>  
+					<!-- <img src="images/i1.png" class="sub-w3lsimg" alt=""/> -->
+					<%= image_tag "i1.png", class: "sub-w3lsimg" %>
+				</div>
+				<div class="clearfix"> </div> 
+			</div>
+		</div>
+		<!-- //subscribe --> 
+		<!-- footer -->
+		<div class="footer agileits-w3layouts">
+			<div class="container">
+				<div class="w3_footer_grids">
+					<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
+						<h3>company</h3>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>  
+							<li><a href="careers.html">Careers</a></li>  
+							<li><a href="help.html">Partner With Us</a></li>   
+						</ul>
+					</div> 
+					<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
+						<h3>help</h3>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li> 
+							<li><a href="login.html">Returns</a></li>   
+							<li><a href="login.html">Order Status</a></li> 
+							<li><a href="offers.html">Offers</a></li> 
+						</ul>  
+					</div>
+					<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
+						<h3>policy info</h3>
+						<ul>  
+							<li><a href="terms.html">Terms & Conditions</a></li>  
+							<li><a href="privacy.html">Privacy Policy</a></li>
+							<li><a href="login.html">Return Policy</a></li> 
+						</ul>   
+					</div>
+					<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
+						<h3>Menu</h3> 
+						<ul>
+							<li><a href="menu.html">All Day Menu</a></li> 
+							<li><a href="menu.html">Lunch</a></li>
+							<li><a href="menu.html">Dinner</a></li>
+							<li><a href="menu.html">Flavours</a></li> 
+						</ul>  
+					</div> 
+					<div class="clearfix"> </div>
+				</div>
+			</div> 
+		</div>
+		<div class="copyw3-agile"> 
+			<div class="container">
+				<p>&copy; 2017 Awesome Food. All rights reserved</p>
+			</div>
+		</div>
+		<!-- //footer --> 
+
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+
+			$(document).ready(function() {
+				$("#owl-demo").owlCarousel ({
+					items : 3,
+					lazyLoad : true,
+					autoPlay : true,
+					pagination : true,
+				});
+			});
+		</script>
+
+    </body>
+</html>

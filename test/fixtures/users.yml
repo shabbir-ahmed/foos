@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  email: MyString
+  image: MyString
+  password_digest: MyString
+  headline: MyString
+  summery: MyString
+  position: MyString
+  dob: 2017-04-03
+  provider: MyString
+  uid: MyString
+  nationality: MyString
+  religion: MyString
+  gender: MyString
+  phone: MyString
+  address: MyString
+  fb_url: MyString
+  twitter_url: MyString
+  linkedin_url: MyString
+  last_logdate: 2017-04-03 07:09:35
+  password_reset_token: MyString
+  account_activation_key: MyString
+  oauth_expires_at: 2017-04-03 07:09:35
+  oauth_token: MyString
+  activation_digest: MyString
+  activeted_at: 2017-04-03 07:09:35
+  activated: 1
+  reset_digest: MyString
+  reset_sent_at: 2017-04-03 07:09:35
+
+two:
+  full_name: MyString
+  email: MyString
+  image: MyString
+  password_digest: MyString
+  headline: MyString
+  summery: MyString
+  position: MyString
+  dob: 2017-04-03
+  provider: MyString
+  uid: MyString
+  nationality: MyString
+  religion: MyString
+  gender: MyString
+  phone: MyString
+  address: MyString
+  fb_url: MyString
+  twitter_url: MyString
+  linkedin_url: MyString
+  last_logdate: 2017-04-03 07:09:35
+  password_reset_token: MyString
+  account_activation_key: MyString
+  oauth_expires_at: 2017-04-03 07:09:35
+  oauth_token: MyString
+  activation_digest: MyString
+  activeted_at: 2017-04-03 07:09:35
+  activated: 1
+  reset_digest: MyString
+  reset_sent_at: 2017-04-03 07:09:35
