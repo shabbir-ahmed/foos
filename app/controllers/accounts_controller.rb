@@ -72,6 +72,6 @@ class AccountsController < ApplicationController
     end
     
     def update_params
-        params.require(:user).permit(:full_name, :email, :image, :headline, :summery, :position, :dob, :gender, :phone, :address)
+        params.require(:user).permit(:full_name, :email, :image, :headline, :summery, :position, :dob, :gender, :phone, :address, :nationality, :religion)
     end
 end

@@ -3,10 +3,9 @@
 	</div>
 	<!-- sign up-page -->
 	<div class="login-page about">
-		<%= image_tag "img3.jpg", class: "login-w3img" %>
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Profile</h3>  
-			<div class="login-agileinfo"> 
+			<div class="col-md-12" style="box-shadow: 0 0 14px 7px rgba(224, 224, 224, 0.5);margin: 3.5em auto 1em;padding: 1em 3em 2.5em;"> 
 				    
 			    <table class="table"> 
 				    <thead> 
@@ -15,14 +14,87 @@
 				    		 <th>Email</th> 
 				    		 <th>Phone</th> 
 				    		 <th>Location</th> 
+				    		 <th>Gender</th> 
+				    		 <th>Date of Birth</th> 
+				    		 <th>Country</th> 
+				    		 <th>Religion</th> 
 				    	</tr> 
 				    </thead> 
 				    <tbody> 
 				    	<tr> 
-				    		<td style="cursor: pointer;"><%= best_in_place @user, :full_name, as: :input, url: account_path(current_user) %> </i></td> 
-				    		<td style="cursor: pointer;"><%= best_in_place @user, :email, as: :input, url: account_path(current_user) %></td> 
-				    		<td style="cursor: pointer;"><%= best_in_place @user, :phone, as: :input, url: account_path(current_user) %></td> 
-				    		<td style="cursor: pointer;"><%= best_in_place @user, :address, as: :input, url: account_path(current_user) %></td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :full_name, as: :input, 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				url: account_path(current_user) %> 
+				    		</td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :email, as: :input, 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				url: account_path(current_user) %>
+				    		</td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :phone, as: :input, 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				url: account_path(current_user) %>
+				    		</td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :address, as: :textarea, 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				url: account_path(current_user) %>
+				    		</td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :gender, as: :select, 
+				    				collection: %w(Male Femail), 
+				    				place_holder: "Add content!", 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				url: account_path(current_user) %>
+				    		</td> 
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :dob, as: :input, 
+				    				place_holder: "Add content!", 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				id: "date_input",
+				    				url: account_path(current_user) %>
+				    		</td>
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :nationality, as: :input, 
+				    				place_holder: "Add content!", 
+				    				ok_button: "&#x2713;".html_safe, 
+				    				cancel_button: '&#x2715;'.html_safe, 
+				    				inner_class: "form-control", 
+				    				ok_button_class: "btn btn-success", 
+				    				cancel_button_class: "btn btn-danger", 
+				    				url: account_path(current_user) %>
+				    		</td>
+				    		<td style="cursor: pointer;">
+				    			<%= best_in_place @user, :religion, as: :select, 
+				    				place_holder: "Add content!", 
+				    				collection: %w(Islam Other NA), 
+				    				inner_class: "form-control",
+				    				url: account_path(current_user) %>
+				    		</td>
 				    	</tr> 
 				    </tbody> 
 			   	</table>

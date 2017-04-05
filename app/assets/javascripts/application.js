@@ -14,6 +14,13 @@
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place
+//= require best_in_place.jquery-ui
+//= require best_in_place.purr
 //= require turbolinks
 //= require redactor-rails
 //= require_tree .
+
+
+// $('.best_in_place').bind("ajax:success", function () {$(this).closest('tr').effect('highlight'); });
+$('.on_success').bind("ajax:success", function(){$(this).closest('td').effect('highlight');});
+$('.bounce_on').bind("ajax:success", function(){$(this).closest('td').effect('bounce');});
