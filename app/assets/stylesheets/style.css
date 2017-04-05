@@ -64,7 +64,7 @@ body a:focus {
     padding: 0 1em;
     font-size: 1em;
     color: #fff;
-    font-weight: 200;
+    /*font-weight: 200;*/
 }
 .w3ls-header-right ul li a{ 
 	color: #fff;
@@ -108,7 +108,7 @@ body a:focus {
 .navigation {
     padding: 0 0 0.6em;
     text-align: center;
-    background: rgba(103, 182, 228, 0.88);
+    background: rgba(219,22,255, 0.59);
 	position: relative;
 } 
 .w3ls_products_pos h4 {
@@ -223,7 +223,8 @@ ul.multi-column-dropdown h6 {
 .multi-column-dropdown li a {
     display: block;
     clear: both;
-    color: #999 !important;
+    /*color: #999 !important;*/
+    color: rgb(0, 128, 0) !important;
     white-space: normal;
     text-decoration: none;
     font-size: 1em;
