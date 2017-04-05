@@ -4,4 +4,13 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :warning, :danger, :info
   protect_from_forgery with: :exception
   include AccountsHelper
+  include ApplicationHelper
+  protected
+
+  	def authenticate_user!
+        if logged_in?
+        else
+          redirect_to login_accounts_path(continue: store_location), :danger => 'Please Login'
+        end
+    end
 end

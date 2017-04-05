@@ -26,9 +26,8 @@ class AccountsController < ApplicationController
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
             # Log the user in and redirect to the user's show page.
-            # redirect_to root_path
-            redirect_to root_url
-      		#success: 'Your Profile updated'
+            # redirect_to root_url
+            redirect_back_or request.env["HTTP_REFERER"]
         else
           	redirect_to login_path,
           	danger: 'Invalid email/password combination'

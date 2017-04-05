@@ -48,10 +48,6 @@
     									</ul>
 									</li>
 									
-									<li class="head-dpdn" data-turbolinks="false">
-        								<a href="<%= new_food_path %>"><i class="fa fa-cutlery" aria-hidden="true"></i> Post New</a>
-        							</li> 
-									
 								<% else %>
     						
         							<li class="head-dpdn">
@@ -61,6 +57,10 @@
         								<a href="<%= login_accounts_path %>"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
         							</li> 
         						<% end %>
+        						
+        						<li class="head-dpdn" data-turbolinks="false">
+    								<a href="<%= new_food_path %>"><i class="fa fa-cutlery" aria-hidden="true"></i> Post New</a>
+    							</li> 
     							
     							<li class="head-dpdn">
     								<a href="help.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
