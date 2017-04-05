@@ -849,7 +849,8 @@ img.w3order-img {
 }
 ol.breadcrumb.w3l-crumbs {
     padding: 1em 2em;
-    background: #ffe9e8;
+    /*background: #ffe9e8;*/
+    background: rgba(196, 48, 241, 0.3) none repeat scroll 0 0;
 	margin: 0;
 } 
 .breadcrumb.w3l-crumbs li {

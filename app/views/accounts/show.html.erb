@@ -7,18 +7,6 @@
 		</ol>
 	</div>
 	<!-- //breadcrumb -->
-	<!-- sign up-page -->
-	<div class="login-page about">
-		<%= image_tag "img3.jpg", class: "login-w3img" %>
-		<div class="container"> 
-			<h3 class="w3ls-title w3ls-title1">Update your account</h3>  
-			<div class="login-agileinfo"> 
-			
-				    <%= @user.full_name %>
-				    <%= @user.email %>
-				    <%= @user.phone %>
-				    <%= @user.address %>
-				
-			</div>	 
-		</div>
+	<div id="profile">
+		<%= render partial: "profile" %>
 	</div>

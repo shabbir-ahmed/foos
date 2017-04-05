@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'carrierwave'
 gem 'redactor-rails'
+gem 'best_in_place'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

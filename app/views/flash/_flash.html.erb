@@ -1,0 +1,8 @@
+<% flash.each do |key, value| %>
+	<div class="col-md-4 col-md-offset-4">
+		<div class="alert alert-<%= key %> fade in" data-easein="expandIn">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<%= value %>
+		</div>
+	</div>
+<% end %>
