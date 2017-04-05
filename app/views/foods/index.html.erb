@@ -45,7 +45,11 @@
 											<p><%= food.title %></p>
 											<h6><%= food.cost %><sup>TK</sup></h6>
 											<a href="<%= food_path(food) %>">Details</a>
-											<p><%= food.user.full_name %></p>
+											<p>
+												<a href="<%= account_path(food.user) %>">
+													<%= food.user.full_name %>
+												</a>
+											</p>
 										</div>
 									</div>
 								</div> 
@@ -66,7 +70,11 @@
 											<p><%= food.title %></p>
 											<h6><%= food.cost %><sup>TK</sup></h6>
 											<a href="<%= food_path(food) %>">Details</a>
-											<p><%= food.user.full_name %></p>
+											<p>
+												<a href="<%= account_path(food.user) %>">
+													<%= food.user.full_name %>
+												</a>
+											</p>
 										</div>
 									</div>
 								</div> 
