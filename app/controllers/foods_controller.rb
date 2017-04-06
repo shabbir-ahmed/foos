@@ -13,10 +13,10 @@ class FoodsController < ApplicationController
   	@food = current_user.foods.new(food_params)
   	if @food.save
   		redirect_to food_path(@food),
-        success: 'Create your delecious food'
+        flash[:success] = 'Create your delecious food'
   	else
   		render 'new',
-        danger: 'Something wrong'
+        flash[:danger] = 'Something wrong'
   	end
   end
 
