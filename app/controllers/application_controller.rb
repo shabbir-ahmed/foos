@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   	def authenticate_user!
         if logged_in?
         else
-          redirect_to login_accounts_path(continue: store_location), :danger => 'Please Login'
+          redirect_to login_accounts_path(continue: store_location), :danger => 'Please Login To Continue'
         end
     end
 end
