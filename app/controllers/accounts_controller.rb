@@ -11,10 +11,10 @@ class AccountsController < ApplicationController
   	    @user = User.new(user_params)
       	if @user.save
       		redirect_to root_url,
-            success: 'Login to use your credential'
+            flash[:success] = 'Login to use your credential'
       	else
       		render 'new',
-            danger: 'Something wrong'
+            flash[:danger] = 'Something wrong'
       	end
   end
   
@@ -33,7 +33,7 @@ class AccountsController < ApplicationController
             redirect_back_or request.env["HTTP_REFERER"]
         else
           	redirect_to login_path,
-          	danger: 'Invalid email/password combination'
+          	flash[:danger] = 'Invalid email/password combination'
         end
   end
 
