@@ -1,2 +1,104 @@
-<h1>Accounts#index</h1>
-<p>Find me in app/views/accounts/index.html.erb</p>
+	<%provide(:title, "Users")%>
+	<!-- products -->
+	<div class="products">	 
+		<div class="container">
+			<div class="col-md-9 product-w3ls-right"> 
+				<div class="product-top">
+					<h4>Food Collection</h4>
+					<ul> 
+						<li class="dropdown head-dpdn">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter By<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Low price</a></li> 
+								<li><a href="#">High price</a></li>
+								<li><a href="#">Latest</a></li>  
+							</ul> 
+						</li>
+						<li class="dropdown head-dpdn">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Food Type<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Breakfast</a></li> 
+								<li><a href="#">Lunch</a></li>
+								<li><a href="#">Dinner</a></li>  
+							</ul> 
+						</li>
+					</ul> 
+					<div class="clearfix"> </div>
+				</div>
+				<div class="products-row">
+				    <% @counter = 0 %>
+					<% @counter = @counter%2 %>
+				    <% @users.each do |user| %>
+				    <% if @counter == 1 %>
+    					<div class="col-xs-6 col-sm-4 product-grids">
+    						<div class="flip-container">
+    							<div class="flipper agile-products">
+    								<div class="front"> 
+    								    <% if user.image %>
+    								        <%= image_tag user.image_url, class: "img-responsive" %>
+    								    <% else %>
+    									    <%= image_tag "user.png", class: "img-responsive" %>
+    									<% end %>
+    									<div class="agile-product-text">              
+    										<h5><%= truncate(user.full_name, length: 10) %></h5>  
+    									</div> 
+    								</div>
+    								<div class="back">
+    									<h4><%= user.full_name %></h4>
+    									<p>Maecenas condimentum interdum lacus, ac varius nisl.</p>
+    									<h6><%= user.foods.count %><sup>Posts</sup></h6>
+    										<a href="<%= account_path(user) %>">Details</a>
+    								</div>
+    							</div>
+    						</div> 
+    					</div> 
+    					<% else %>
+							<div class="col-xs-6 col-sm-4 product-grids">
+								<div class="flip-container">
+									<div class="flipper agile-products">
+										<div class="front"> 
+											<div class="agile-product-text">              
+												<h5><%= truncate(user.full_name, length: 10) %></h5>  
+											</div> 
+											<% if user.image %>
+        								        <%= image_tag user.image_url, class: "img-responsive" %>
+        								    <% else %>
+        									    <%= image_tag "user.png", class: "img-responsive" %>
+        									<% end %>
+										</div>
+										<div class="back">
+											<h4><%= user.full_name %></h4>
+        									<p>Maecenas condimentum interdum lacus, ac varius nisl.</p>
+        									<h6><%= user.foods.count %><sup>Posts</sup></h6>
+											<a href=" <%= account_path(user) %> ">Details</a>
+										</div>
+									</div>
+								</div> 
+							</div>
+						<% end %>
+
+						<% @counter += 1 %>
+						
+					<% end %>
+					
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 rsidebar">
+				<div class="related-row">
+					<h4>YOU MAY ALSO LIKE</h4>
+					<div class="galry-like">  
+						<a href="#" data-toggle="modal" data-target="#myModal1"><%= image_tag "s1.jpg", class: "img-responsive" %></a>         
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div> 
+		</div>
+	</div>
+	<!-- //products --> 
+	<div class="container"> 
+		<div class="w3agile-deals prds-w3text"> 
+			<h5>Vestibulum maximus quam et quam egestas imperdiet. In dignissim auctor viverra.</h5>
+		</div>
+	</div>
+	<!-- dishes -->

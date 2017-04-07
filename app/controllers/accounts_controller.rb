@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
   def index
+      @users = User.all
   end
 
   def new
@@ -10,10 +11,10 @@ class AccountsController < ApplicationController
         params.permit!
   	    @user = User.new(user_params)
       	if @user.save
-      		redirect_to root_url,
+      		redirect_to login_accounts_url
             flash[:success] = 'Login to use your credential'
       	else
-      		render 'new',
+      		render 'new'
             flash[:danger] = 'Something wrong'
       	end
   end
@@ -32,7 +33,7 @@ class AccountsController < ApplicationController
             # redirect_to root_url
             redirect_back_or request.env["HTTP_REFERER"]
         else
-          	redirect_to login_path,
+          	redirect_to login_path
           	flash[:danger] = 'Invalid email/password combination'
         end
   end
