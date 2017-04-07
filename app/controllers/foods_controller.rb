@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit]
   def index
-    @foods = Food.all
+    @foods = Food.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
