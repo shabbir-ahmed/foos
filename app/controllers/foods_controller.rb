@@ -12,10 +12,10 @@ class FoodsController < ApplicationController
     params.permit!
   	@food = current_user.foods.new(food_params)
   	if @food.save
-  		redirect_to food_path(@food),
+  		redirect_to food_path(@food)
         flash[:success] = 'Create your delecious food'
   	else
-  		render 'new',
+  		render 'new'
         flash[:danger] = 'Something wrong'
   	end
   end
