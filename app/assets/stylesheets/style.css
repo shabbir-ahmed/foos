@@ -953,17 +953,20 @@ h3.w3ls-title.w3ls-title1 {
 }
 .product-top {
     background: #08cae2;
-    padding: 1em 2em;
+    /*padding: 1em 2em;*/
+    padding: 20px 2em 8px;
 }
 .product-top li.dropdown{
     display: inline-block;
     float: right;
 	margin-left: 2em;
+	margin-top: 7px;
 } 
 .product-top h4 {
     font-size: 1.3em;
     color: #fff; 
     float: left;
+    margin-top: 7px;
 }
 .product-top ul li a.dropdown-toggle {
     color: #fff;
