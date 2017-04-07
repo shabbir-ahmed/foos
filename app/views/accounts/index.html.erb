@@ -34,10 +34,11 @@
     						<div class="flip-container">
     							<div class="flipper agile-products">
     								<div class="front"> 
-    								    <% if user.image %>
-    								        <%= image_tag user.image_url, class: "img-responsive" %>
+    								    <% if user.image.blank? %>
+    								        
+    								        <%= image_tag "user.png", class: "img-responsive" %>
     								    <% else %>
-    									    <%= image_tag "user.png", class: "img-responsive" %>
+    									    <%= image_tag user.image_url(:thumb), class: "img-responsive" %>
     									<% end %>
     									<div class="agile-product-text">              
     										<h5><%= truncate(user.full_name, length: 10) %></h5>  
@@ -60,10 +61,11 @@
 											<div class="agile-product-text">              
 												<h5><%= truncate(user.full_name, length: 10) %></h5>  
 											</div> 
-											<% if user.image %>
-        								        <%= image_tag user.image_url, class: "img-responsive" %>
+											<% if user.image.blank? %>
+        								        
+        								        <%= image_tag "user.png", class: "img-responsive" %>
         								    <% else %>
-        									    <%= image_tag "user.png", class: "img-responsive" %>
+        									    <%= image_tag user.image_url(:thumb), class: "img-responsive" %>
         									<% end %>
 										</div>
 										<div class="back">

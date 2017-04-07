@@ -24,15 +24,7 @@
 			<div class="login-agileinfo"> 
 				<%= form_for @user, url: account_path do |f| %>
 
-					<%= f.text_field :full_name, class: "agile-ltext", placeholder: "Full Name", required: true %>
-
-					<%= f.email_field :email, class: "agile-ltext", placeholder: "Email", required: true %>
-					
-					<%= f.text_field :gender, class: "agile-ltext", placeholder: "Gender" %>
-					
-					<%= f.text_field :phone, class: "agile-ltext", placeholder: "Phone" %>
-					
-					<%= f.text_field :address, class: "agile-ltext", placeholder: "Address" %>
+					<%= f.file_field :image, multiple: true, required: true %>
 
 					<%= f.submit 'Update' %>
 				<% end %>
