@@ -29,6 +29,7 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'carrierwave'
 gem 'redactor-rails'
 gem 'best_in_place'
+gem 'will_paginate'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
