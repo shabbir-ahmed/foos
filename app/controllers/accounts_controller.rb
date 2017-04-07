@@ -56,12 +56,12 @@ class AccountsController < ApplicationController
 	    params.permit!
         if @user.update_attributes(update_params)
             # sleep 1
-            redirect_to account_path(@user)
+            # redirect_to account_path(@user)
             flash[:success] = 'Updated your profile'
-            # respond_to do |format|
-            #   format.xml { render(xml: @user) }
-            #   format.json { render(json: @user ) }
-            # end
+            respond_to do |format|
+              format.xml { render(xml: @user) }
+              format.json { render(json: @user ) }
+            end
         else
             render 'edit'
             flash[:danger] = 'Something went wrong'
