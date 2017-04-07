@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  # get 'abouts/index'
+
+  # get 'contacts/index'
+
+  # get 'helps/index'
+  
+
   # get 'foods/index'
 
   # get 'foods/new'
@@ -7,6 +14,9 @@ Rails.application.routes.draw do
 
   # get 'foods/show'
   
+  resources :abouts
+  resources :contacts
+  resources :helps
   resources :foods
 
   # get 'accounts/index'
