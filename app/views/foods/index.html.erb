@@ -7,10 +7,10 @@
 					<h4>Food Collection</h4>
 					
 					<!--<form class="col-sm-7">-->
-					<%= form_tag(foods_path, method: "get", class: "col-sm-7") do %>
+					<%= form_tag(foods_path, method: "get", class: "col-sm-7", id: "s_form", remote: true) do %>
 					  	<div class="form-group">
 					    	<!--<input type="text" class="form-control" placeholder="Search">-->
-					    	<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search" %>
+					    	<%= text_field_tag :search, params[:search], class: "form-control", id: "key", placeholder: "Search" %>
 					  	</div>
 					<% end %>
 					
@@ -128,3 +128,23 @@
 		</div>
 	</div> 
 	<!-- //modal -->
+	
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $('#key').on('input', function() {
+            var h = $('#key').val();
+            if (h.length > 1) {
+                $(document).ajaxStart(function(){
+                    $("#loading").css("display", "block");
+                });
+
+               $(document).ajaxComplete(function(){
+                    $("#loading").css("display", "none");
+                });
+
+                $("#s_form").submit();
+
+            }
+        });
+    });
+    </script>
