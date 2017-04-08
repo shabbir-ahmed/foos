@@ -5,10 +5,10 @@
 	        <div class="banner_text_main">
 	          	<h2>Delicious food from the <br> <span>Best Chefs For you.</span></h2>
 	          	<div class="agileits_search">
-		            <form action="#" method="post">
-		              	<input name="Search" type="text" placeholder="Enter Your Area Name" required="">
-		              	<input type="submit" value="Search">
-		            </form>
+		            <%= form_tag(foods_path, method: "get") do %>
+					    	<%= text_field_tag :search, params[:search], placeholder: "Search" %>
+					    	<%= submit_tag "GO" %>
+					<% end %>
 	          	</div> 
 	        </div>
 		</div>
