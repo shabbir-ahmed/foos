@@ -23,7 +23,7 @@
 				    <tbody> 
 				    	<tr> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :full_name, as: :input, 
 					    				ok_button: "&#x2713;".html_safe, 
 					    				cancel_button: '&#x2715;'.html_safe, 
@@ -36,7 +36,7 @@
 				    				<% end %>
 				    		</td> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :email, as: :input, 
 					    				ok_button: "&#x2713;".html_safe, 
 					    				cancel_button: '&#x2715;'.html_safe, 
@@ -49,7 +49,7 @@
 				    				<% end %>
 				    		</td> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :phone, as: :input, 
 					    				ok_button: "&#x2713;".html_safe, 
 					    				cancel_button: '&#x2715;'.html_safe, 
@@ -62,7 +62,7 @@
 				    				<% end %>
 				    		</td> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :address, as: :textarea, 
 					    				ok_button: "&#x2713;".html_safe, 
 					    				cancel_button: '&#x2715;'.html_safe, 
@@ -75,7 +75,7 @@
 				    				<% end %>
 				    		</td> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :gender, as: :select, 
 					    				collection: [['Male', 'Male'], ['Female', 'Female']], 
 					    				place_holder: "Add content!", 
@@ -88,7 +88,7 @@
 				    				<% end %>
 				    		</td> 
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :dob, as: :input, 
 					    				place_holder: "Add content!", 
 					    				ok_button: "&#x2713;".html_safe, 
@@ -103,7 +103,7 @@
 				    				<% end %>
 				    		</td>
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :nationality, as: :input, 
 					    				place_holder: "Add content!", 
 					    				ok_button: "&#x2713;".html_safe, 
@@ -117,7 +117,7 @@
 				    				<% end %>
 				    		</td>
 				    		<td style="cursor: pointer;">
-				    			<% if current_user %>
+				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :religion, as: :select, 
 					    				place_holder: "Add content!", 
 					    				collection: [['Islam', 'Islam'], ['Other', 'Other'], ['N/A', 'N/A']], 
