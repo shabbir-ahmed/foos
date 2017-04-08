@@ -22,6 +22,12 @@
 					
 					<%= f.select :location, [['Sylhet','Sylhet'],['Dhaka','Dhaka'],['Khulna','Khulna'],['Rajshahi','Rajshahi'],['Chittagong','Chittagong'],['Barisal','Barisal'],['Rangpur', 'Rangpur'], ['Mymensingh', 'Mymensingh']],{}, class: 'form-control'%>
 					
+					<%= f.select :location, [['Food Type',''],['Breakfast','Breakfast'],['Lunch','Lunch'],['Dinner','Dinner']],{}, class: 'form-control'%>
+					
+					<%= f.text_field :restaurant, class: "form-control", placeholder: "Restaurant Name", required: true %>
+					
+					<%= f.text_field :restaurant_web, class: "form-control", placeholder: "Restaurant URL", required: true %>
+					
 					<%= f.text_area :directions, class: "redactor", placeholder: "Directions" %>
 					
 					<%= f.text_field :nutrition, class: "form-control", placeholder: "Nutrition" %>
