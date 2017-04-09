@@ -4,10 +4,10 @@
 		<div class="container">
 			<div class="col-md-9 product-w3ls-right"> 
 				<div class="product-top">
-					<h4>Food Collection</h4>
+					<h4>Users</h4>
 					<%= form_tag(accounts_path, method: "get", class: "col-sm-7", id: "s_form", remote: true) do %>
 					  	<div class="form-group">
-					    	<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search" %>
+					    	<%= text_field_tag :search, params[:search], class: "form-control", id: "key", placeholder: "Search" %>
 					  	</div>
 					<% end %>
 					<ul> 
