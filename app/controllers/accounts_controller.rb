@@ -34,7 +34,7 @@ class AccountsController < ApplicationController
             # redirect_to root_url
             redirect_back_or request.env["HTTP_REFERER"]
         else
-          	redirect_to login_path
+          	redirect_to login_accounts_path
           	flash[:danger] = 'Invalid email/password combination'
         end
   end
