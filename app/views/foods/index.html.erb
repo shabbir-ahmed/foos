@@ -6,10 +6,8 @@
 				<div class="product-top">
 					<h4>Food Collection</h4>
 					
-					<!--<form class="col-sm-7">-->
 					<%= form_tag(foods_path, method: "get", class: "col-sm-7", id: "s_form", remote: true) do %>
 					  	<div class="form-group">
-					    	<!--<input type="text" class="form-control" placeholder="Search">-->
 					    	<%= text_field_tag :search, params[:search], class: "form-control", id: "key", placeholder: "Search" %>
 					  	</div>
 					<% end %>
