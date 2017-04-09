@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   def index
-      @users = User.paginate(:page => params[:page], :per_page => 10).where(["full_name LIKE ? ", "%#{params[:search]}%"])
+      @users = User.paginate(page: params[:page], per_page: 10).where(["full_name LIKE ? ", "%#{params[:search]}%"])
   end
 
   def new
