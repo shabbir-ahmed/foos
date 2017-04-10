@@ -2,10 +2,10 @@
 	<% if @foods.blank? %>
 		<%= "Not Found" %>
 	<% else %>
-		<% @counter = 0 %>
-		<% @counter = @counter%2 %>
+		<% @counter = 2 %>
 		<% @foods.each do |food| %>
-			<% if @counter == 1 %>
+			<% @counterplus = @counter%2 %>
+			<% if @counterplus == 0 %>
 				<div class="col-xs-6 col-sm-4 product-grids">
 					<div class="flip-container">
 						<div class="flipper agile-products">
