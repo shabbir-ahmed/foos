@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  before_filter :authenticate_user!, only: [:new, :create, :edit]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
   def index
     # @foods = Food.paginate(:page => params[:page], :per_page => 10).where(["title LIKE ? ", "%#{params[:search]}%"])
     
@@ -35,6 +35,24 @@ class FoodsController < ApplicationController
   end
 
   def edit
+    @food = Food.find(params[:id])
+  end
+  
+  def update
+    @food = Food.find(params[:id])
+	    params.permit!
+        if @food.update_attributes(food_params)
+            # sleep 1
+            flash[:success] = 'Updated your post'
+            redirect_to food_path(@food)
+            # respond_to do |format|
+            #   format.xml { render(xml: @food) }
+            #   format.json { render(json: @food ) }
+            # end
+        else
+            render 'edit'
+            flash[:danger] = 'Something went wrong'
+        end
   end
 
   def show
