@@ -9,6 +9,9 @@ class FoodsController < ApplicationController
       elsif params[:city]
         @foods = Food.paginate(page: params[:page], per_page: 10)
         @foods = @foods.where(["location LIKE ? ", "%#{params[:city]}%"])
+      elsif params[:type]
+        @foods = Food.paginate(page: params[:page], per_page: 10)
+        @foods = @foods.where(["food_type LIKE ? ", "%#{params[:type]}%"])
       else
         @foods = Food.all.paginate(page: params[:page], per_page: 10)
       end
