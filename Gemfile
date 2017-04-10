@@ -30,6 +30,8 @@ gem 'carrierwave'
 gem 'redactor-rails'
 gem 'best_in_place'
 gem 'will_paginate'
+# gem 'rmagick'
+gem 'mini_magick'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

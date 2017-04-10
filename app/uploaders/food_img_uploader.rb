@@ -30,8 +30,12 @@ class FoodImgUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  # version :cover do
+  #   process resize_to_fit: [1680, 1120]
+  # end
+  
   # version :thumb do
-  #   process resize_to_fit: [50, 50]
+  #   process resize_to_fit: [640, 425]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.

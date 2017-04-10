@@ -22,7 +22,7 @@
 					
 					<%= f.select :location, [['Sylhet','Sylhet'],['Dhaka','Dhaka'],['Khulna','Khulna'],['Rajshahi','Rajshahi'],['Chittagong','Chittagong'],['Barisal','Barisal'],['Rangpur', 'Rangpur'], ['Mymensingh', 'Mymensingh']],{}, class: 'form-control'%>
 					
-					<%= f.select :location, [['Food Type',''],['Breakfast','Breakfast'],['Lunch','Lunch'],['Dinner','Dinner']],{}, class: 'form-control'%>
+					<%= f.select :food_type, [['Food Type',''],['Breakfast','Breakfast'],['Lunch','Lunch'],['Dinner','Dinner']],{}, class: 'form-control'%>
 					
 					<%= f.text_field :restaurant, class: "form-control", placeholder: "Restaurant Name", required: true %>
 					

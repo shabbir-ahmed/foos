@@ -8,7 +8,7 @@
 				<div class="flip-container">
 					<div class="flipper agile-products">
 						<div class="front"> 
-							<%= image_tag food.image1, class: "img-responsive"%>
+							<%= image_tag food.image1_url, class: "img-responsive"%>
 							<div class="agile-product-text">              
 								<h5><%= truncate(food.title, length: 9) %></h5>  
 							</div> 
@@ -41,7 +41,7 @@
 								<h5><%= truncate(food.title, length: 9) %></h5>  
 							</div> 
 							
-							<%= image_tag food.image1, class: "img-responsive"%>
+							<%= image_tag food.image1_url, class: "img-responsive"%>
 						</div>
 						<div class="back">
 							<h4><%= truncate(food.title, length: 9) %></h4>
