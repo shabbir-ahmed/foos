@@ -120,8 +120,9 @@
 					    				id: "date_input",
 					    				url: account_path(current_user) %>
 				    				<% else %>
-				    				<% end %>
 				    				<%= @user.dob %>
+				    				<% end %>
+				    				
 				    				<% else %>
 				    					<%= @user.dob %>
 				    				<% end %>
