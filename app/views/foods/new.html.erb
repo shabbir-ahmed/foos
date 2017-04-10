@@ -22,17 +22,17 @@
 					
 					<%= f.select :location, [['Sylhet','Sylhet'],['Dhaka','Dhaka'],['Khulna','Khulna'],['Rajshahi','Rajshahi'],['Chittagong','Chittagong'],['Barisal','Barisal'],['Rangpur', 'Rangpur'], ['Mymensingh', 'Mymensingh']],{}, class: 'form-control'%>
 					
-					<%= f.select :location, [['Food Type',''],['Breakfast','Breakfast'],['Lunch','Lunch'],['Dinner','Dinner']],{}, class: 'form-control'%>
+					<%= f.select :location, [['Food Type','Food Type'],['Breakfast','Breakfast'],['Lunch','Lunch'],['Dinner','Dinner']],{}, class: 'form-control'%>
 					
 					<%= f.text_field :restaurant, class: "form-control", placeholder: "Restaurant Name", required: true %>
 					
 					<%= f.text_field :restaurant_web, class: "form-control", placeholder: "Restaurant URL", required: true %>
 					
-					<%= f.text_area :directions, class: "redactor", placeholder: "Directions" %>
+					<%= f.text_area :directions, class: "redactor", placeholder: "Directions", required: true %>
 					
-					<%= f.text_field :nutrition, class: "form-control", placeholder: "Nutrition" %>
+					<%= f.text_field :nutrition, class: "form-control", placeholder: "Nutrition", required: true %>
 					
-					<%= f.text_field :calorie, class: "form-control", placeholder: "Calorie" %>
+					<%= f.text_field :calorie, class: "form-control", placeholder: "Calorie", required: true %>
 					
 					<img id="img_prev1" width=90 height=90 src="#" class="img-thumbnail hidden"/> 
 					<img id="img_prev2" width=90 height=90 src="#" class="img-thumbnail hidden"/>
@@ -44,9 +44,9 @@
 					<div id="browse2" class="browse">Image2</div>
 					<div id="browse3" class="browse">Image3</div>
 					
-					<%= f.file_field :image1, style: "display:none", id: "avatar-upload1" %>
-					<%= f.file_field :image2, style: "display:none", id: "avatar-upload2" %>
-					<%= f.file_field :image3, style: "display:none", id: "avatar-upload3" %>
+					<%= f.file_field :image1, style: "display:none", id: "avatar-upload1", required: true %>
+					<%= f.file_field :image2, style: "display:none", id: "avatar-upload2", required: true %>
+					<%= f.file_field :image3, style: "display:none", id: "avatar-upload3", required: true %>
 
 					<%= f.submit 'Create Delecious Food' %>
 				<% end %>
