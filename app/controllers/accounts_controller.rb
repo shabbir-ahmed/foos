@@ -71,10 +71,12 @@ class AccountsController < ApplicationController
   
   private
   
+    # User Signup Parameters
     def user_params
         params.require(:user).permit(:full_name, :email, :password, :password_confirmation)
     end
     
+    # Update Parameters
     def update_params
         params.require(:user).permit(:full_name, :email, :image, :headline, :summery, :position, :dob, :gender, :phone, :address, :nationality, :religion)
     end
