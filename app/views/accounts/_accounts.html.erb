@@ -23,7 +23,7 @@
 								<% if user.headline.blank? %>
 									<%= "No Content" %>
 								<% else %>
-									<% if user.headline %>
+									<%= user.headline %>
 								<% end %>
 							</p>
 							<h6><%= user.foods.count %><sup>Posts</sup></h6>
@@ -53,7 +53,7 @@
 									<% if user.headline.blank? %>
 										<%= "No Content" %>
 									<% else %>
-										<% if user.headline %>
+										<%= user.headline %>
 									<% end %>
 								</p>
 								<h6><%= user.foods.count %><sup>Posts</sup></h6>
