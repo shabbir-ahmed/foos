@@ -23,11 +23,11 @@ class FoodsController < ApplicationController
   end
 
   def new
-    # Create food post
+    # Render food post form
     @food = Food.new
   end
   
-  def create
+  def create # Create food post
     params.permit!
   	@food = current_user.foods.new(food_params)
   	if @food.save
