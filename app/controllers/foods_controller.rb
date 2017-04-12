@@ -39,11 +39,11 @@ class FoodsController < ApplicationController
   	end
   end
 
-  def edit
+  def edit # Edit food post form
     @food = Food.find(params[:id])
   end
   
-  def update
+  def update # Update food post
     @food = Food.find(params[:id])
 	    params.permit!
         if @food.update_attributes(food_params)
