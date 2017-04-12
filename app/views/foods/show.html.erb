@@ -76,7 +76,11 @@
 						</div> 
 						<div class="ftr-top-right">
 							<h4>Restaurant Web</h4>
-							<p><%= @food.restaurant_web %> </p>
+							<p>
+								<a href="<%= url_with_protocol(@food.restaurant_web) %>">
+									<%= @food.restaurant_web %> 
+								</a>
+							</p>
 						</div> 
 						<div class="clearfix"> </div>
 					</div>
