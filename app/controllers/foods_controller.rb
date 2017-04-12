@@ -2,7 +2,8 @@ class FoodsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
   def index
     # @foods = Food.paginate(:page => params[:page], :per_page => 10).where(["title LIKE ? ", "%#{params[:search]}%"])
-    
+     
+     # Serch Foods
       if params[:search]
           @foods = Food.paginate(page: params[:page], per_page: 10)
           @foods = @foods.where(["title LIKE ? ", "%#{params[:search]}%"])
@@ -22,6 +23,7 @@ class FoodsController < ApplicationController
   end
 
   def new
+    # Create food post
     @food = Food.new
   end
   
