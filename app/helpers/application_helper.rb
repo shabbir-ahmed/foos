@@ -9,4 +9,9 @@ module ApplicationHelper
 	def store_location
 		session[:forwarding_url] = request.url if request.get?
 	end
+	
+	#=> URL Simplified
+	def url_with_protocol(url)
+     	/^http/.match(url) ? url : "http://#{url}"
+   	end
 end
