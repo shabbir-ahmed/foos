@@ -64,6 +64,7 @@ class FoodsController < ApplicationController
   
   private
   
+  # Food parameters
   def food_params
     params.require(:food).permit(:title, :description, :cost, :location, :directions, :nutrition, :calorie, :image1, :image2, :image3, :restaurant, :food_type, :restaurant_web, :published)
   end
