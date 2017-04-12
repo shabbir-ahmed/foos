@@ -60,11 +60,11 @@ class FoodsController < ApplicationController
         end
   end
 
-  def show
+  def show # View Food post
     @food = Food.find(params[:id])
   end
   
-  private
+  private # Method declare for strong parameters
   
   # Food parameters
   def food_params
