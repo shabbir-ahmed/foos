@@ -32,6 +32,7 @@ gem 'best_in_place'
 gem 'will_paginate'
 # gem 'rmagick'
 gem 'mini_magick'
+gem 'client_side_validations'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
