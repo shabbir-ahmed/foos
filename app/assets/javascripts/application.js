@@ -17,6 +17,7 @@
 //= require best_in_place.jquery-ui
 //= require best_in_place.purr
 //= require turbolinks
+//= require rails.validations
 //= require redactor-rails
 //= require_tree .
 

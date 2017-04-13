@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    
+    validates_presence_of :full_name, :email, :password, :on => :create
     has_many :foods
 
     mount_uploader :image, AvatarUploader

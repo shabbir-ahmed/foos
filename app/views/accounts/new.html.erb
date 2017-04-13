@@ -22,13 +22,13 @@
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Sign Up to your account</h3>  
 			<div class="login-agileinfo"> 
-				<%= form_for @user, url: accounts_path do |f| %>
+				<%= form_for @user, url: accounts_path, validate: true do |f| %>
 
-					<%= f.text_field :full_name, class: "agile-ltext", placeholder: "Full Name", required: true %>
+					<%= f.text_field :full_name, class: "agile-ltext", placeholder: "Full Name" %>
 
-					<%= f.email_field :email, class: "agile-ltext", placeholder: "Email", required: true %>
+					<%= f.email_field :email, class: "agile-ltext", placeholder: "Email" %>
 
-					<%= f.password_field :password, class: "agile-ltext", placeholder: "Password", required: true %>
+					<%= f.password_field :password, class: "agile-ltext", placeholder: "Password" %>
 					<%= f.password_field :password_confirmation, class: "agile-ltext", placeholder: "Password" %>
 
 					<!--<div class="wthreelogin-text"> 
