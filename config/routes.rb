@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'dashboard/index'
+
   # get 'users/index'
 
   # get 'users/edit'
@@ -18,7 +20,12 @@ Rails.application.routes.draw do
 
   # get 'foods/show'
   
-  resources :users
+  resources :dashboard do
+    collection do
+       resources :users
+    end
+  end
+ 
   resources :abouts
   resources :contacts
   resources :helps
