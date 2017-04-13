@@ -18,6 +18,7 @@
 				    		 <th>Date of Birth</th> 
 				    		 <th>Country</th> 
 				    		 <th>Religion</th> 
+				    		 <th>Role</th> 
 				    	</tr> 
 				    </thead> 
 				    <tbody> 
@@ -158,6 +159,14 @@
 			    				<% end %>
 			    				<% else %>
 			    					<%= @user.religion %>
+			    				<% end %>
+				    		</td>
+				    		
+				    		<td>
+				    			<% if @user.role == "admin" %>
+			    					<%= "Administrator" %>
+			    				<% else %>
+			    					<%= "Normal" %>
 			    				<% end %>
 				    		</td>
 				    	</tr> 

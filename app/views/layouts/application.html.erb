@@ -35,12 +35,14 @@
 									    </a>
     									<ul class="dropdown-menu multi-column columns-3">
     										<div class="row">
-    											<div class="col-sm-10">
+    											<div class="col-sm-12">
     												<ul class="multi-column-dropdown">
     													<!--<li><a href="<%= edit_account_path(current_user) %>">Profile Photo</a></li> -->
-    													<li><a href="<%= account_path(current_user) %>"> Profile</a></li> 
     													<% if current_user.role == "admin" %>
+    													    <li><a href="<%= account_path(current_user) %>"> Admin Profile</a></li>
     													    <li><a href="<%= users_path %>"> All Profiles</a></li> 
+    													 <% else %>
+    													     <li><a href="<%= account_path(current_user) %>"> Profile</a></li>
     													 <% end %>
     													 <hr> 
     													<li><%= link_to " Log out", logout_accounts_path, method: :delete %></li>
