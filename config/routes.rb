@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # get 'users/index'
+
+  # get 'users/edit'
+
   # get 'abouts/index'
 
   # get 'contacts/index'
@@ -14,6 +18,7 @@ Rails.application.routes.draw do
 
   # get 'foods/show'
   
+  resources :users
   resources :abouts
   resources :contacts
   resources :helps

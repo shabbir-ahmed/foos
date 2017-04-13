@@ -39,6 +39,9 @@
     												<ul class="multi-column-dropdown">
     													<!--<li><a href="<%= edit_account_path(current_user) %>">Profile Photo</a></li> -->
     													<li><a href="<%= account_path(current_user) %>"> Profile</a></li> 
+    													<% if current_user.role == "admin" %>
+    													    <li><a href="<%= users_path %>"> All Profiles</a></li> 
+    													 <% end %>
     													 <hr> 
     													<li><%= link_to " Log out", logout_accounts_path, method: :delete %></li>
     												</ul>

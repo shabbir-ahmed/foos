@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407194416) do
+ActiveRecord::Schema.define(version: 20170413065749) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "title"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170407194416) do
     t.datetime "reset_sent_at"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "role"
   end
 
 end
