@@ -29,6 +29,7 @@ Rails.application.routes.draw do
  
   #=> About Us Page 
   resources :abouts
+  #=> Contact Us Page
   resources :contacts
   resources :helps
   resources :foods
