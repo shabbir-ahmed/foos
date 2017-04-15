@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   # get 'foods/show'
   
+  #=> Dashboard for admin
   resources :dashboard do
     collection do
        resources :users
