@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     end
   end
  
+  #=> About Us Page 
   resources :abouts
   resources :contacts
   resources :helps
