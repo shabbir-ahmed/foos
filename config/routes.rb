@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   resources :contacts
   #=> Helps Page
   resources :helps
+  #=> Foods Page
   resources :foods
 
   # get 'accounts/index'
