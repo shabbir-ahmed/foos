@@ -30,6 +30,7 @@ class FoodImgUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  
   # version :cover do
   #   process resize_to_fit: [1680, 1120]
   # end

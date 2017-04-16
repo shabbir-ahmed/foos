@@ -39,10 +39,10 @@ class AccountsController < ApplicationController
         end
   end
 
-    def logout #-> User session destroy
-        log_out
-        redirect_to root_url
-    end
+  def logout #-> User session destroy
+      log_out
+      redirect_to root_url
+  end
   
   def show
       @user = User.find(params[:id])
@@ -53,7 +53,7 @@ class AccountsController < ApplicationController
   end
   
   def update
-        @user = User.find(params[:id])
+      @user = User.find(params[:id])
 	    params.permit!
         if @user.update_attributes(update_params)
             # sleep 1
