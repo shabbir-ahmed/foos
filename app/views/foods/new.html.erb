@@ -34,6 +34,14 @@
 					
 					<%= f.text_field :calorie, class: "form-control", placeholder: "Calorie", required: true %>
 					
+					Have Offers? 
+					<label class="radio-inline">
+				      <input type="radio" name="optradio" id="yes"> Yes
+				    </label>
+				    <label class="radio-inline">
+				      <input type="radio" name="optradio" id="no" checked> No
+				    </label>
+					
 					<%= f.number_field :offer_percent, class: "form-control", placeholder: "Offer Like 15" %>
 					
 					<%= f.text_area :offer_occasions, class: "form-control", placeholder: "Offer Occasions like: Sunday Special" %>

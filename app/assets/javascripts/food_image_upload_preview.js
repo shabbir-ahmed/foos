@@ -63,4 +63,18 @@ $(document).ready(function () {
 	    $('input[id="avatar-upload3"]').trigger('click');
 	});
 	
+	// For offer input field
+	$("input#food_offer_percent").hide();
+	$("textarea#food_offer_occasions").hide();
+	
+	$("#yes").click(function() {
+	    $("input#food_offer_percent").show();
+	    $("textarea#food_offer_occasions").show();
+	    // alert("OK");
+	});
+	$("#no").click(function() {
+	    $("input#food_offer_percent").hide();
+	    $("textarea#food_offer_occasions").hide();
+	});
+	
 });
