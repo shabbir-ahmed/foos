@@ -323,14 +323,14 @@ option {
 	background: linear-gradient(to bottom, #f1efef 51%,#00BCD4 125%);
 }
 .w3ls-add-grids {
-    background: url(../assets/img1.jpg)no-repeat 0px 0px;
+    /*background: url(../assets/img1.jpg)no-repeat 0px 0px;*/
     background-size: cover;
     width: 45%; 
     float: left;
     margin: 0 0 0 2.5em;
 }
 .w3ls-add-grids.w3ls-add-grids-right{
-    background: url(../assets/img2.jpg)no-repeat 0px 0px; 
+    /*background: url(../assets/img2.jpg)no-repeat 0px 0px; */
 	background-size: cover;
 	text-align: right;
 } 

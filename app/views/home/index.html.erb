@@ -18,20 +18,31 @@
 	<div class="add-products">  
 		<div class="container">
 			<div class="add-products-row">
-				<div class="w3ls-add-grids">
-					<a href="menu.html"> 
-						<h4>Get <span>20%<br>Cashback</span></h4>
-						<h5>Ordered in mobile app only </h5>
-						<h6>Order Now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
-					</a>
-				</div>
-				<div class="w3ls-add-grids w3ls-add-grids-right">
-					<a href="menu.html"> 
-						<h4>GET Upto<span><br>40% Offer</span></h4>
-						<h5>Sunday special discount</h5>
-						<h6>Order Now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
-					</a>
-				</div> 
+				<% @counter = 2 %>
+				<% @offers.each do |offer| %>
+					<% @counterplus = @counter%2 %>
+						<% if @counterplus == 0 %>
+							<style>.w3ls-add-grids{background: url(<%= offer.image1_url %>)no-repeat 0px 0px;} </style>
+							<div class="w3ls-add-grids">
+								<a href="<%= food_path(offer) %>"> 
+									<h4>Get Upto<span><%= offer.offer_percent %>%<br>Offer</span></h4>
+									<h5><%= offer.offer_occasions %> </h5>
+									<h6>Details <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
+								</a>
+							</div>
+						<% else %>
+							<style>.w3ls-add-grids.w3ls-add-grids-right{background: url(<%= offer.image1_url %>)no-repeat 0px 0px;} </style>
+							<div class="w3ls-add-grids w3ls-add-grids-right">
+								<a href="<%= food_path(offer) %>"> 
+									<h4>GET Upto<span><br><%= offer.offer_percent %>% Offer</span></h4>
+									<h5><%= offer.offer_occasions %></h5>
+									<h6>Details <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
+								</a>
+							</div>
+						<% end %>
+					<% @counter += 1 %>
+				<% end %>
+				
 				<div class="clearfix"> </div> 
 			</div>  	 
 		</div>
@@ -39,7 +50,6 @@
 	<!-- //add-products --> 
 	<!-- order -->   	
 	<div class="wthree-order">  
-		<!-- <img src="images/i2.jpg" class="w3order-img" alt=""/> -->
 		<%= image_tag "i2.jpg", class: "w3order-img" %>
 		<div class="container">
 			<h3 class="w3ls-title">How To Order Online Food</h3>
