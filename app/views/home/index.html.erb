@@ -41,6 +41,9 @@
 							</div>
 						<% end %>
 					<% @counter += 1 %>
+					<% if @counter == 5 %>
+						<% break %>
+					<% end %>
 				<% end %>
 				
 				<div class="clearfix"> </div> 
