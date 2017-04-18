@@ -61,6 +61,7 @@
 				    			<% if logged_in? %>
 				    			<% if current_user.id == @user.id %>
 					    			<%= best_in_place @user, :phone, as: :input, 
+					    				place_holder: "Add content!",
 					    				ok_button: "&#x2713;".html_safe, 
 					    				cancel_button: '&#x2715;'.html_safe, 
 					    				inner_class: "form-control", 
