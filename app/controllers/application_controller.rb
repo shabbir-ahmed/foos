@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   include AccountsHelper
   include ApplicationHelper
   protected
-
+    
+    # Check Login
   	def authenticate_user!
         if logged_in?
         else
